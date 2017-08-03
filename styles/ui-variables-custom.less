@@ -60,7 +60,7 @@
 // Background (Custom) -----------------
 @level-1-color: lighten(@base-background-color, 6%);
 @level-2-color: @base-background-color;
-@level-3-color: darken(@base-background-color, 3%);
+@level-3-color: darken(@base-background-color, 8%);
 
 @level-3-color-hover:  lighten(@level-3-color, 6%);
 @level-3-color-active: lighten(@level-3-color, 3%);
@@ -92,7 +92,7 @@
 @input-selection-color:             mix(@accent-color, @input-background-color, 25%);
 @input-selection-color-focus:       mix(@accent-color, @input-background-color, 50%);
 
-@overlay-backdrop-color:            hsl(@ui-hue,@ui-saturation,10%);
+@overlay-backdrop-color:            @level-3-color;
 @overlay-backdrop-opacity:          .9;
 
 @progress-background-color:         @accent-color;
@@ -118,12 +118,12 @@
 
 // Sizes (Custom) -----------------
 
-@ui-size:                 1em;
+@ui-size:                 1.1em;
 @ui-input-size:           @ui-size*1.15;
 @ui-padding:              @ui-size*1.5;
 @ui-padding-pane:         @ui-size*.5;
 @ui-padding-icon:         @ui-padding/3.3;
-@ui-line-height:          @ui-size*2;
+@ui-line-height:          @ui-size*1.75;
 @ui-tab-height:           @ui-size*2.5;
 
 

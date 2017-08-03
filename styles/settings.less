@@ -15,6 +15,13 @@
 
 
 .settings-view {
+	.link {
+		&, &:hover {
+			color: @text-color-selected;
+		}
+	}
+
+	.alert { border: none; }
 
 	// Menu ------------------------------
 
@@ -24,7 +31,7 @@
 		max-width: @ui-size * 20;
 		border-width: 0 1px 0 0;
 		border-image: linear-gradient(@level-2-color 10px, @base-border-color 200px) 0 1 0 0 stretch;
-		background: @level-2-color;
+		background: @level-3-color;
 
 		.btn {
 			white-space: initial;
@@ -36,8 +43,23 @@
 			}
 		}
 
+		.panels-menu {
+			li {
+				a { .transition-03; }
 
+				&.active {
+						a {
+								background: @level-1-color;
+						}
+				}
+
+				&:hover {
+						background: @level-2-color;
+				}
+			}
+		}
 	}
+
 	.nav {
 		& > li > a {
 			padding: @ui-padding/2 @ui-padding;
@@ -49,7 +71,7 @@
 	// Sections ------------------------------
 
 	& > .panels {
-		background-color: @level-2-color;
+		background-color: @level-3-color;
 	}
 
 	.section-container {
@@ -86,9 +108,18 @@
 	// Cards ------------------------------
 
 	.package-card {
+		.transition-03;
+
 		padding: @ui-padding;
+		border: none;
+		background: @level-2-color;
+
+		&:hover {
+			background: @level-1-color;
+		}
+
 		.meta-controls .status-indicator {
-			width: @ui-padding/4;
+			width: @ui-padding / 4;
 			&:before {
 				content: "\00a0"; // fixes 0 height
 			}

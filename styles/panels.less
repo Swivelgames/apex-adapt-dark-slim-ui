@@ -4,25 +4,32 @@
 atom-panel {
   .text(normal);
   position: relative;
-  border-bottom: 1px solid @base-border-color;
+  border: none;
+  // border-bottom: 1px solid @base-border-color;
 
   &.top {
-    border-right: 1px solid @base-border-color;
+    border: none;
+    // border-right: 1px solid @base-border-color;
   }
   &.left {
-    border-right: 1px solid @base-border-color;
+    border: none;
+    // border-right: 1px solid @base-border-color;
   }
   &.right {
-    border-left: 1px solid @base-border-color;
+    border: none;
+    // border-left: 1px solid @base-border-color;
   }
   &.bottom {
-    border-right: 1px solid @base-border-color;
+    border: none;
+    // border-right: 1px solid @base-border-color;
   }
   &.footer:last-child {
-    border-bottom: none;
+    border: none;
+    // border-bottom: none;
   }
   &.tool-panel:empty {
     border: none;
+    // border: none;
   }
 }
 
@@ -30,19 +37,6 @@ atom-panel {
   &.bordered {
     border: 1px solid @base-border-color;
     border-radius: @component-border-radius;
-  }
-}
-
-.inset-panel {
-  position: relative;
-  background-color: @inset-panel-background-color;
-  border-radius: @component-border-radius;
-  &.bordered {
-    border: 1px solid @base-border-color;
-    border-radius: @component-border-radius;
-  }
-  & .panel-heading {
-    border-color: @inset-panel-border-color;
   }
 }
 
@@ -60,5 +54,21 @@ atom-panel {
       lighten(@button-background-color-selected, 10%),
       lighten(@text-color, 10%)
     );
+  }
+}
+
+.inset-panel {
+  position: relative;
+  background-color: @inset-panel-background-color;
+  border-radius: @component-border-radius;
+
+  &.bordered {
+    border: 1px solid @base-border-color;
+    border-radius: @component-border-radius;
+  }
+
+  & .panel-heading {
+    border-color: @inset-panel-border-color;
+    background-color: darken(@inset-panel-background-color, 4%);
   }
 }

@@ -1,7 +1,7 @@
 
 // Tabs
 
-@tab-border: 1px solid @tab-border-color;
+@tab-border: 0 solid transparent; // 0px solid @tab-border-color;
 @title-padding: .66em;
 @icon-padding-top: .5em; // 2.5 (total) - 1.5 (text) / 2
 @icon-padding-right: .5em;
@@ -9,11 +9,15 @@
 .tab-bar {
   position: relative;
   height: @ui-tab-height;
-  box-shadow: inset 0 -1px 0 @tab-border-color;
+  // box-shadow: inset 0 -1px 0 @tab-border-color;
   background: @tab-bar-background-color;
   overflow-x: auto;
   overflow-y: hidden;
-  border-radius: 0;
+  // border-radius: 0;
+  // border-top: 1px solid @tab-border-color;
+  margin: 15px 0;
+
+  .title;
 
   &::-webkit-scrollbar {
     display: none;
@@ -31,27 +35,34 @@
     top: 0;
     padding: 0;
     margin: 0;
-    height: inherit;
+    height: @ui-tab-height;
     font-size: inherit;
     line-height: @ui-tab-height;
     color: @tab-text-color;
     background-color: @tab-background-color;
     box-shadow: inherit;
-    border-left: @tab-border;
+    // border-left: @tab-border;
+
+    padding-right: 10px;
+    // border-top: 1px solid transparent;
+    margin-top: -1px;
+    max-width: 130px;
+    text-transform: uppercase;
+    font-size: 11px;
+    transition: all 150ms ease-out;
+
     &.active {
-      color: @tab-text-color-active;
-      background-color: @tab-background-color-active;
       box-shadow: none;
-    }
-    &:first-of-type {
-      border-left-color: transparent;
-    }
-    &:last-of-type {
-      // use box-shadow to not take up any space
-      box-shadow: inset 0 -1px 0 @tab-border-color, 1px 0 0 @base-border-color;
-    }
-    &.active:last-of-type {
-      box-shadow: 1px 0 0 @base-border-color;
+
+      flex: 1;
+      color: @text-color-selected;
+      border-top: 0;
+      font-weight: bold;
+
+      .title {
+          padding: 0;
+      }
+
     }
 
 
@@ -60,18 +71,23 @@
     .title {
       text-align: center;
       margin: 0 @title-padding;
+
+      // Icons ----------------------
+      &:before {
+        margin-right: .3em;
+        width: 1em;
+        height: 1em;
+        line-height: 1;
+        font-size: 1.1em;
+      }
+
+      .icon {
+          &::before {
+              font-size: 13px;
+          }
+      }
     }
 
-
-    // Icons ----------------------
-
-    .title.title:before {
-      margin-right: .3em;
-      width: 1em;
-      height: 1em;
-      line-height: 1;
-      font-size: 1.1em;
-    }
 
     // Close icon ----------------------
 
@@ -83,7 +99,7 @@
       width: 1.5em;
       height: 1.5em;
       line-height: 1.5;
-      border-radius: @component-border-radius;
+      // border-radius: @component-border-radius;
       background-color: inherit;
       overflow: hidden;
       transform: scale(0);
@@ -110,30 +126,34 @@
       transform: scale(1);
       transition-duration: .16s;
     }
-  }
 
   // Modified icon ----------------------
 
-  .tab.modified {
-    &:hover .close-icon {
-      color: @accent-color;
-      &:hover {
-        color: @accent-bg-text-color;
+    &.modified {
+      .title {
+          color: @accent-color;
       }
-    }
-    &:not(:hover) .close-icon {
-      top: @icon-padding-top;
-      right: @icon-padding-right;
-      width: 1.5em;
-      height: 1.5em;
-      line-height: 1.5;
-      color: @accent-color;
-      border-radius: @component-border-radius;
-      border: none;
-      transform: scale(1);
-      &::before {
-        content: "\f052";
-        display: inline-block;
+      &:hover .close-icon {
+        color: @accent-color;
+        &:hover {
+          color: @accent-bg-text-color;
+        }
+      }
+      &:not(:hover) .close-icon {
+        top: @icon-padding-top;
+        right: @icon-padding-right;
+        width: 1.5em;
+        height: 1.5em;
+        line-height: 1.5;
+        color: @accent-color;
+        border-radius: @component-border-radius;
+        border: none;
+        transform: scale(1);
+
+        &::before {
+          content: "\f052";
+          display: inline-block;
+        }
       }
     }
   }
@@ -151,7 +171,9 @@
   // Dragging ----------------------
 
   .tab.is-dragging {
-    opacity: .5;
+    background: darken(@tab-background-color, 10%);
+    // border-color: transparent;
+    opacity: 0.5;
 
     .close-icon,
     &:before {
@@ -178,7 +200,7 @@
       top: @ui-tab-height/2;
       margin: -4px 0 0 -3px;
       border-radius: 0;
-      border: 4px solid @accent-color;
+      // border: 4px solid @accent-color;
       transform: rotate(45deg);
       background: transparent;
     }
@@ -190,7 +212,7 @@
       &:after {
         transform: none;
         margin-left: -10px;
-        border-color: transparent @accent-color transparent transparent;
+        // border-color: transparent @accent-color transparent transparent;
       }
     }
   }
@@ -211,17 +233,24 @@
 
 // Active pane marker --------------
 
-atom-pane.active .tab.active:before {
+atom-pane.active .tab:before {
   content: "";
   position: absolute;
   pointer-events: none;
   z-index: 2;
-  top: 0;
-  left: -1px; // cover left border
   bottom: 0;
-  width: 2px;
+  left: 50%;
+  width: 0;
+  height: 1px;
   background: @accent-color;
+  transition: all 100ms ease-in-out;
 }
+atom-pane.active .tab.active:before {
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
 
 // hide marker in docks
 atom-dock .tab-bar .tab::before {
@@ -238,6 +267,18 @@ atom-dock .tab-bar .tab::before {
   &[data-type$="StyleguideView"],
   &[data-type="MarkdownPreviewView"] {
     color: @tab-text-color-editor;
-    background-color: @tab-background-color-editor; // Match syntax background color
+    // background-color: @tab-background-color-editor; // Match syntax background color
   }
+}
+
+atom-pane:not(.active) {
+  .tab-bar .tab.active {
+    // border-top: 1px solid transparent;
+    color: @text-color-subtle;
+  }
+}
+
+// Correct padding applied by no-title-bar
+.platform-darwin atom-workspace atom-panel-container.left:empty + atom-workspace-axis.vertical .tab-bar {
+  padding-left: 0 !important;
 }

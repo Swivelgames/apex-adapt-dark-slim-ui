@@ -6,10 +6,12 @@
 .loading-spinner(@size) {
   position: relative;
   display: block;
-  width: 1em;
-  height: 1em;
+  width: @size;
+  height: @size;
   font-size: @size;
-  background: radial-gradient(@accent-color .1em, transparent .11em);
+  background-image: url(images/octocat-spinner-128.gif);
+  background-repeat: no-repeat;
+  background-size: @size @size;
 
   &::before,
   &::after {

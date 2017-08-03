@@ -2,7 +2,8 @@
 
 .tree-view {
   font-size: @ui-size;
-  background: @tree-view-background-color;
+  color: @text-color;
+  background-color: @tree-view-background-color;
 
   .project-root.project-root {
     &:before {
@@ -14,17 +15,24 @@
     }
   }
 
-  .selected:before {
-    background: @tree-view-background-selected-color;
+  .selected {
+    color: @text-color-selected;
+
+    &:before {
+      background: @tree-view-background-selected-color;
+    }
   }
 }
 
 .theme-apex-adapt-dark-ui .tree-view .project-root.project-root::before {
-  border-top: 1px solid transparent;
+  // border-top: 1px solid transparent;
   background-clip: padding-box;
 }
 
 .tree-view-resizer {
+  // border-top: 1px solid @base-border-color;
+  // border-right: 1px solid @base-border-color;
+
   .tree-view-resize-handle {
     width: 8px;
   }

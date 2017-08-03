@@ -1,8 +1,8 @@
 {
   "name": "apex-adapt-dark-ui",
   "theme": "ui",
-  "version": "1.10.5",
-  "description": "Atom One dark UI theme",
+  "version": "0.0.1",
+  "description": "Apex Dark UI, ported to a fork of the One Dark UI theme",
   "keywords": [
     "dark",
     "adaptive",

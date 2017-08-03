@@ -9,13 +9,19 @@ atom-panel-container.modal {
 
 atom-panel.modal {
   position: relative;
-  width: 100%;
   max-width: @modal-width;
   margin: 0 auto;
   left: initial;
   color: @text-color;
-  background-color: transparent;
   padding: @ui-padding/2;
+
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
 
   &.from-top {
     top: @component-padding * 5;
@@ -23,6 +29,10 @@ atom-panel.modal {
 
   atom-text-editor[mini] {
     margin-bottom: @ui-padding/2;
+  }
+
+  & > .select-list {
+    min-width: 500px;
   }
 
   .select-list ol.list-group,
@@ -90,9 +100,9 @@ atom-panel.modal {
     right: 0;
     bottom: 0;
     z-index: 0;
-    background-color: @overlay-background-color;
+    background-color: transparent;
     border-radius: @component-border-radius*2;
-    box-shadow: 0 6px 12px -2px hsla(0,0%,0%,.4);
+    box-shadow: none;
   }
 
   // Backdrop
@@ -117,4 +127,8 @@ atom-panel.modal {
     100% { opacity: @overlay-backdrop-opacity; }
   }
 
+}
+
+.inset-panel {
+  border-radius: 0;
 }

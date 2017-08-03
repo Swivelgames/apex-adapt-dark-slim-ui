@@ -66,7 +66,7 @@
   // We want to highlight the background of the list items because we dont
   // know their size.
   li.selected {
-    background-color: @background-color-selected;
+    background-color: @level-2-color;
     &:before{ display: none; }
   }
 
@@ -141,4 +141,118 @@ li.ui-sortable-helper {
   padding: 0 @ui-padding;
   background: @background-color-highlight;
   box-shadow: 0 0 1px @base-border-color;
+}
+
+.list-group {
+  li {
+    padding-left: @component-padding/2;
+    border-bottom: 1px dotted @base-border-color;
+    color: @text-color-subtle;
+    .transition;
+
+    &.selected {
+      color: @text-color-selected;
+      z-index: 15;
+      &:before{ display: none; }
+    }
+  }
+}
+
+// List Group -------------------
+.list-tree {
+  .selected {
+    color: @text-color-selected;
+  }
+}
+
+// List Tree -------------------
+.list-tree {
+  .selected {
+    color: @text-color-selected;
+  }
+}
+
+
+// Select List -------------------
+.select-list {
+  li {
+    padding: @component-padding * .75 @component-padding;
+  }
+  .status {
+    float: right;
+  }
+}
+
+.select-list {
+  .character-match {
+    font-weight: normal !important;
+    border-bottom: 1px solid;
+    color: inherit;
+  }
+}
+
+
+// Popover List -------------------
+// Used as a popover for something like autocomplete.
+autocomplete-suggestion-list.select-list.popover-list {
+  @popover-list-padding: @component-padding / 2;
+
+  padding: @popover-list-padding * 3;
+  border-radius: @component-border-radius;
+  background-color: @level-3-color;
+
+  .medium-shadow;
+
+  .suggestion-description {
+    background: transparent;
+    font-size: .9rem;
+  }
+
+  .suggestion-description-content {
+    font-size: .9rem;
+  }
+
+  ol.list-group {
+    li {
+      line-height: 2em;
+    }
+  }
+
+  .selected {
+    background: @level-3-color-active;
+    .icon {
+     color: @level-1-color;
+    }
+  }
+}
+
+.select-list .selected .secondary-line {
+  color: @text-color-subtle;
+}
+
+.list-group li:not(.list-nested-item) {
+  line-height: 1.8;
+}
+
+autocomplete-suggestion-list {
+  .suggestion-list-scroller {
+    background: @app-background-color;
+  }
+
+  .left-label {
+    color: @text-color-highlight;
+  }
+
+  .word-container {
+    color: @text-color-subtle;
+  }
+
+  .icon-container {
+    // display: none !important;
+    Color
+    .icon {
+      background: rgba(255, 255, 255, .5) !important;
+      color: @text-color-subtle;
+    }
+  }
 }

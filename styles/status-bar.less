@@ -3,9 +3,11 @@
 @status-bar-padding: @ui-padding;
 
 .status-bar {
+  color: @text-color-subtle ;
   font-size: @ui-size;
   height: @status-bar-height;
   line-height: @status-bar-height;
+  border-top: 1px solid @base-border-color;
   background-color: @level-3-color;
 
   .flexbox-repaint-hack {
@@ -78,5 +80,18 @@
       text-decoration: none;
       cursor: default;
     }
+  }
+}
+
+.footer {
+  transition: opacity 150ms ease-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 150ms ease-out;
+  opacity: 0;
+  &:hover {
+    opacity: 1;
   }
 }
