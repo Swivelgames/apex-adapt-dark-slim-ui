@@ -1,15 +1,15 @@
-## One Dark UI theme [![Build Status](https://travis-ci.org/swivelgames/apex-adapt-dark-ui.svg?branch=master)](https://travis-ci.org/swivelgames/apex-adapt-dark-ui)
+## Apex Adapt Dark UI theme
 
 A dark UI theme that adapts to most syntax themes.
 
-![One dark UI](https://cloud.githubusercontent.com/assets/378023/26246818/08255b76-3cd6-11e7-9f6d-6ae3e16a89a9.png)
+![Apex Adapt Dark UI](https://user-images.githubusercontent.com/1456302/28935025-b3f7d64c-7848-11e7-900c-d1bc0ebaadbc.png)
 
-> The font used in the screenshot is [Fira Mono](https://github.com/mozilla/Fira).
+> The font used in the screenshot is [Hack](https://github.com/chrissimpkins/Hack).
 
 
 ### Install
 
-This theme comes bundled with Atom and can be activated by going to the __Settings > Themes__ section and selecting "One Dark" from the __UI Themes__ drop-down menu.
+This theme comes bundled with Atom and can be activated by going to the __Settings > Themes__ section and selecting "Apex Adapt Dark" from the __UI Themes__ drop-down menu.
 
 
 ### Settings
@@ -20,7 +20,7 @@ In the theme settings you can:
 - Choose between 3 __Tab Sizing__ modes.
 - Hide the  __dock buttons__.
 
-To make changes, go to `Settings > Themes > One Dark UI > Settings` or the cog icon next to the theme picker.
+To make changes, go to `Settings > Themes > Apex Adapt Dark UI > Settings` or the cog icon next to the theme picker.
 
 
 ### Customize
