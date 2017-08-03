@@ -1,6 +1,8 @@
 ## Apex Adapt Dark UI theme
 
-A dark UI theme that adapts to most syntax themes.
+A dark UI theme based on Apex' gorgeous white [`apex-ui`](https://atom.io/themes/apex-ui) theme, ported to a fork of Atom's [`One Dark`](https://atom.io/themes/one-dark-ui) for the added ability adapt to most syntax themes.
+
+If you haven't already, go see [the original theme by Apex **here**](https://atom.io/themes/apex-ui)!
 
 ![Apex Adapt Dark UI](https://user-images.githubusercontent.com/1456302/28935025-b3f7d64c-7848-11e7-900c-d1bc0ebaadbc.png)
 
