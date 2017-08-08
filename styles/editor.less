@@ -40,19 +40,6 @@ atom-text-editor[mini] {
     border-width: 2px;
   }
 
-  &.is-focused {
-    .focus();
-    // border: 0;
-    // border-bottom: 1px solid transparent;
-    background-color: @input-background-color-focus;
-    .selection .region {
-      background-color: @input-selection-color-focus;
-    }
-    .cursor {
-      display: block;
-    }
-  }
-
   &, &::shadow {
     .placeholder-text {
       color: @text-color-subtle;
@@ -64,6 +51,19 @@ atom-text-editor[mini] {
 
     .cursor {
       display: none;
+    }
+  }
+
+  &.is-focused {
+    .focus();
+    // border: 0;
+    // border-bottom: 1px solid transparent;
+    background-color: @input-background-color-focus;
+    .selection .region {
+      background-color: @input-selection-color-focus;
+    }
+    .cursor {
+      display: block;
     }
   }
 }
