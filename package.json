@@ -1,7 +1,7 @@
 {
   "name": "apex-adapt-dark-slim-ui",
   "theme": "ui",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Apex Adapt Dark Slim UI, ported to a fork of the One Dark UI theme",
   "keywords": [
     "dark",
