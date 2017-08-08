@@ -11,7 +11,9 @@ If you haven't already, go see [the original theme by Apex **here**](https://ato
 
 ### Install
 
-This theme comes bundled with Atom and can be activated by going to the __Settings > Themes__ section and selecting "Apex Adapt Dark" from the __UI Themes__ drop-down menu.
+Install this theme using __Settings > Install__. Select the "Themes" toggle and search for "apex-adapt-dark-ui". From there, go to __Settings > Themes__ section and selecting "Apex Adapt Dark" from the __UI Themes__ drop-down menu.
+
+For the atom package page, visit: [https://atom.io/themes/apex-adapt-dark-ui](https://atom.io/themes/apex-adapt-dark-ui)
 
 
 ### Settings
