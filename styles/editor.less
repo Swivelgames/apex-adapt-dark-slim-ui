@@ -1,4 +1,4 @@
-atom-text-editor, :host {
+atom-text-editor, .editor {
   background: darken(@base-background-color, 10%);
 }
 
@@ -40,7 +40,7 @@ atom-text-editor[mini] {
     border-width: 2px;
   }
 
-  &, &::shadow {
+  &, &.editor {
     .placeholder-text {
       color: @text-color-subtle;
     }
