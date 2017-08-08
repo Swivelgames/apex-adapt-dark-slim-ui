@@ -85,13 +85,15 @@
 
 .footer {
   width: 100%;
-  transition: all 150ms ease-out;
+  transition: opacity 150ms ease-out;
   opacity: 0;
   &:hover {
     opacity: 1;
+    transition: margin-bottom 150ms ease-out 0ms;
   }
 
   &:not(:hover) {
+    transition: all 150ms ease-out 1s;
     margin-bottom: -10px;
   }
 }
