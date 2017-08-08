@@ -8,14 +8,9 @@
 
 .tab-bar {
   position: relative;
-  height: @ui-tab-height;
-  // box-shadow: inset 0 -1px 0 @tab-border-color;
   background: @tab-bar-background-color;
   overflow-x: auto;
   overflow-y: hidden;
-  // border-radius: 0;
-  // border-top: 1px solid @tab-border-color;
-  margin: 15px 0;
 
   .title;
 
@@ -44,8 +39,7 @@
     // border-left: @tab-border;
 
     padding-right: 10px;
-    // border-top: 1px solid transparent;
-    margin-top: -1px;
+    border-top: @tab-border;
     max-width: 130px;
     text-transform: uppercase;
     font-size: 11px;
@@ -272,8 +266,8 @@ atom-dock .tab-bar .tab::before {
 }
 
 atom-pane:not(.active) {
-  .tab-bar .tab.active {
-    // border-top: 1px solid transparent;
+  .tab-bar .tab.active:not(:only-child) {
+    border-top: 1px solid @accent-bg-color;
     color: @text-color-subtle;
   }
 }
