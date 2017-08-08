@@ -266,8 +266,8 @@ atom-dock .tab-bar .tab::before {
 }
 
 atom-pane:not(.active) {
-  .tab-bar .tab.active:not(:only-child) {
-    border-top: 1px solid @accent-bg-color;
+  .tab-bar .tab.active {
+    border-top-color: transparent;
     color: @text-color-subtle;
   }
 }
