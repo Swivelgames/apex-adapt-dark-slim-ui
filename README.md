@@ -4,7 +4,7 @@ A dark UI theme based on Apex' gorgeous white [`apex-ui`](https://atom.io/themes
 
 If you haven't already, go see [the original theme by Apex **here**](https://atom.io/themes/apex-ui)!
 
-![Apex Adapt Dark Slim UI](https://user-images.githubusercontent.com/1456302/28935389-08875aba-784a-11e7-870a-7d489f91f02c.png)
+![Apex Adapt Dark Slim UI](https://user-images.githubusercontent.com/1456302/29087837-ef4764a4-7c3c-11e7-9cdd-e5749a7809c1.png)
 
 > The font used in the screenshot is [Hack](https://github.com/chrissimpkins/Hack).
 
