@@ -1,5 +1,7 @@
 ## Apex Adapt Dark Slim UI theme
 
+[*See the __Original, Non-Slim Version__ here*](https://atom.io/themes/apex-adapt-dark-ui)
+
 A dark UI theme based on Apex' gorgeous white [`apex-ui`](https://atom.io/themes/apex-ui) theme, ported to a fork of Atom's [`One Dark`](https://atom.io/themes/one-dark-ui) for the added ability adapt to most syntax themes.
 
 If you haven't already, go see [the original theme by Apex **here**](https://atom.io/themes/apex-ui)!
