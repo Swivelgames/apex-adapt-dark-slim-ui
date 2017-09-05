@@ -226,8 +226,7 @@
 
 
 // Active pane marker --------------
-
-atom-pane.active .tab:before {
+atom-pane .tab:before {
   content: "";
   position: absolute;
   pointer-events: none;
@@ -239,7 +238,7 @@ atom-pane.active .tab:before {
   background: @accent-color;
   transition: all 100ms ease-in-out;
 }
-atom-pane.active .tab.active:before {
+atom-pane .tab.active:before {
   right: 0;
   left: 0;
   width: 100%;
@@ -247,8 +246,15 @@ atom-pane.active .tab.active:before {
 
 
 // hide marker in docks
-atom-dock .tab-bar .tab::before {
-  display: none;
+atom-dock {
+  .tab-bar .tab::before {
+    display: none;
+  }
+
+  .tab-bar .tab.active {
+    border-top-color: transparent;
+    color: @text-color-subtle;
+  }
 }
 
 
@@ -262,13 +268,6 @@ atom-dock .tab-bar .tab::before {
   &[data-type="MarkdownPreviewView"] {
     color: @tab-text-color-editor;
     // background-color: @tab-background-color-editor; // Match syntax background color
-  }
-}
-
-atom-pane:not(.active) {
-  .tab-bar .tab.active {
-    border-top-color: transparent;
-    color: @text-color-subtle;
   }
 }
 
