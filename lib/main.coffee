@@ -11,6 +11,9 @@ module.exports =
     atom.config.observe 'apex-adapt-dark-slim-ui.hideDockButtons', (value) ->
       setHideDockButtons(value)
 
+    atom.config.observe 'apex-adapt-dark-slim-ui.autoHideStatus', (value) ->
+      setAutoHideStatus(value)
+
     # DEPRECATED: This can be removed at some point (added in Atom 1.17/1.18ish)
     # It removes `layoutMode`
     if atom.config.get('apex-adapt-dark-slim-ui.layoutMode')
@@ -20,6 +23,7 @@ module.exports =
     unsetFontSize()
     unsetTabSizing()
     unsetHideDockButtons()
+    unsetAutoHideStatus()
 
 
 # Font Size -----------------------
@@ -53,3 +57,13 @@ setHideDockButtons = (hideDockButtons) ->
 
 unsetHideDockButtons = ->
   root.removeAttribute('theme-apex-adapt-dark-slim-ui-dock-buttons')
+
+# Auto Hide Status -------------------
+setAutoHideStatus = (autoHideStatus) ->
+  if autoHideStatus
+    root.setAttribute('theme-apex-adapt-dark-slim-ui-auto-hide-status', true)
+  else
+    unsetAutoHideStatus()
+
+unsetAutoHideStatus = ->
+  root.removeAttribute('theme-apex-adapt-dark-slim-ui-auto-hide-status')

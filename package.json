@@ -48,6 +48,13 @@
       "type": "boolean",
       "default": "false",
       "order": 3
+    },
+    "autoHideStatus": {
+      "title": "Auto-hide status bar",
+      "description": "Hides status bar when not hovering (feature requested by @alanzanattadev)",
+      "type": "boolean",
+      "default": "false",
+      "order": 4
     }
   }
 }
